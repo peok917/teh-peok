@@ -1,0 +1,47 @@
+{
+    "name": "listen-keys",
+    "version": "1.0.4",
+    "description": "这是一个简单的 WEB 端快捷键监控和设置工具包",
+    "keywords": [
+        "快捷键",
+        "键盘",
+        "工具包",
+        "热键",
+        "浏览器",
+        "Hot Keys",
+        "Shortcut keys",
+        "Keyboard shortcut",
+        "Listen keys"
+    ],
+    "author": "peok917",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/peok917/teh-peok.git"
+    },
+    "homepage": "https://github.com/XkondenX/tea-kondenx.git/#readme",
+    "main": "index.js",
+    "files": [
+        "LICENSE",
+        "README.md",
+        "lib/*.ts",
+        "dist/*.html",
+        "dist/*.js",
+        "*.d.ts",
+        "*.js"
+    ],
+    "license": "ISC",
+    "private": false,
+    "publishConfig": {
+        "access": "public"
+    },
+    "typings": "./index.d.ts",
+    "scripts": {
+        "compile": "tsc lib/shortcut.ts --sourceMap true --outDir ./dist && npm run minify",
+        "minify": "jsmin -o dist/shortcut.min.js ./dist/shortcut.js",
+        "release": "release-it"
+    },
+    "devDependencies": {
+        "jsmin": "^1.0.1",
+        "typescript": "^4.0.5"
+    }
+}
